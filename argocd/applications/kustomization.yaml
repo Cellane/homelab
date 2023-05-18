@@ -4,3 +4,4 @@ namespace: argocd
 resources:
   - external-dns.yaml
   - metallb.yaml
+  - sealed-secrets.yaml
