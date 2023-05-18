@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Cellane/homelab.git
     targetRevision: master
-    path: argocd
+    path: metallb
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
