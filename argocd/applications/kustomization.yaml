@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: argocd
 resources:
   - external-dns.yaml
+  - longhorn.yaml
   - metallb.yaml
   - sealed-secrets.yaml

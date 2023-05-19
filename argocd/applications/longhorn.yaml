@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb
+  name: longhorn
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Cellane/homelab.git
     targetRevision: master
-    path: metallb
+    path: longhorn
   destination:
     server: https://kubernetes.default.svc
-    namespace: metallb-system
+    namespace: longhorn-system
   syncPolicy:
     automated:
       prune: true
@@ -20,4 +20,4 @@ spec:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: metallb-system
+  name: longhorn-system
