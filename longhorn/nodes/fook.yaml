@@ -6,7 +6,7 @@ spec:
   allowScheduling: false
   disks: {}
   engineManagerCPURequest: 0
-  evictionRequsted: false
+  evictionRequested: false
   name: fook
   replicaManagerCPURequest: 0
   tags: []
