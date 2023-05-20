@@ -4,7 +4,13 @@ metadata:
   name: fook
 spec:
   allowScheduling: false
-  disks: {}
+  disks:
+    default-disk-524aac100a76cc85:
+      allowScheduling: true
+      evictionRequested: false
+      path: /var/lib/longhorn/
+      storageReserved: 9186888499
+      tags: []
   engineManagerCPURequest: 0
   evictionRequested: false
   name: fook
