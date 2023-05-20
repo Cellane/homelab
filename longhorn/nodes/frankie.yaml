@@ -1,0 +1,18 @@
+apiVersion: longhorn.io/v1beta2
+kind: Node
+metadata:
+  name: frankie
+spec:
+  allowScheduling: true
+  disks:
+    default-disk-57805f743fb857f0:
+      allowScheduling: true
+      evictionRequested: false
+      path: /var/lib/longhorn/
+      storageReserved: 536870912
+      tags: []
+  engineManagerCPURequest: 0
+  evictionRequested: false
+  name: frankie
+  replicaManagerCPURequest: 0
+  tags: []
