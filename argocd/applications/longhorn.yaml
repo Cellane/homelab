@@ -19,7 +19,7 @@ spec:
     syncOptions:
       - RespectIgnoreDifferences=true
   ignoreDifferences:
-    - group: "v1"
-      kind: "Service"
+    - kind: Service
+      name: longhorn-frontend
       jsonPointers:
-        - /spec/ports/*/nodePort
+        - /spec/ports/0/nodePort
