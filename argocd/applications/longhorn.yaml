@@ -22,4 +22,4 @@ spec:
     - group: "v1"
       kind: "Service"
       jsonPointers:
-        - /spec/ports/nodePort
+        - /spec/ports/*/nodePort
