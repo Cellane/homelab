@@ -6,7 +6,7 @@ spec:
   allowScheduling: false
   disks:
     default-disk-524aac100a76cc85:
-      allowScheduling: true
+      allowScheduling: false
       evictionRequested: false
       path: /var/lib/longhorn/
       storageReserved: 9186888499
