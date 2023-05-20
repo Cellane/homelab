@@ -6,10 +6,10 @@ resources:
   # - benjy.yaml
   # - lunkwill.yaml
   - fook.yaml
-# patches:
-#   - path: fook.remove-disk.json
-#     target:
-#       group: longhorn.io
-#       version: v1beta2
-#       kind: Node
-#       name: fook
+patches:
+  - path: fook.remove-disk.json
+    target:
+      group: longhorn.io
+      version: v1beta2
+      kind: Node
+      name: fook
