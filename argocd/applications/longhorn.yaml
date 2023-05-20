@@ -13,13 +13,13 @@ spec:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
   syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - RespectIgnoreDifferences=true
   ignoreDifferences:
     - kind: Service
       name: longhorn-frontend
       jsonPointers:
-        - /spec/ports/*/nodePort
+        - /spec/ports/0/nodePort
