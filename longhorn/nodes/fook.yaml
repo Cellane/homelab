@@ -1,0 +1,12 @@
+apiVersion: longhorn.io/v1beta2
+kind: Node
+metadata:
+  name: fook
+spec:
+  allowScheduling: false
+  disks: {}
+  engineManagerCPURequest: 0
+  evictionRequsted: false
+  name: fook
+  replicaManagerCPURequest: 0
+  tags: []
