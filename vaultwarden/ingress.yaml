@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: vaultwarden
   annotations:
-    cert-manager.io/issuer: ca-issuer
+    cert-manager.io/cluster-issuer: ca-issuer
   labels:
     app: vaultwarden
 spec:
