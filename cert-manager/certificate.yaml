@@ -4,7 +4,7 @@ metadata:
   name: ca
 spec:
   isCA: true
-  commonName: ca
+  commonName: Betelgeuse CA
   secretName: root-secret
   privateKey:
     algorithm: ECDSA
