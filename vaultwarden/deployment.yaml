@@ -29,7 +29,7 @@ spec:
                   name: vaultwarden.vaultwarden-db.credentials.postgresql.acid.zalan.do
                   key: password
             - name: DATABASE_URL
-              value: "postgresql://$(DATABASE_USER):$(DATABASE_PASSWORD)@vaultwarden-db:5432/vaultwarden"
+              value: "postgresql://$(DATABASE_USERNAME):$(DATABASE_PASSWORD)@vaultwarden-db:5432/vaultwarden"
           ports:
             - name: http
               containerPort: 80
