@@ -5,4 +5,5 @@ resources:
   - deployment.yaml
   - ingress.yaml
   - persistent-volume-claim.yaml
+  - postgresql.yaml
   - service.yaml

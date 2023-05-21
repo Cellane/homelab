@@ -1,0 +1,20 @@
+apiVersion: acid.zalan.do/v1
+kind: postgresql
+metadata:
+  name: vaultwarden-db
+  labels:
+    app: vaultwarden
+spec:
+  teamId: vaultwarden
+  numberOfInstances: 1
+  volume:
+    size: 1Gi
+  users:
+    admin:
+      - superuser
+      - createdb
+    vaultwarden: []
+  databases:
+    vaultwarden: vaultwarden
+  postgresql:
+    version: "15"
