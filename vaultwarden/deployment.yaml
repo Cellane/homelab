@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vaultwarden
-  namespace: default
   labels:
     app: vaultwarden
 spec:

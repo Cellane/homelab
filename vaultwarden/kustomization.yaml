@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: vaultwarden
 resources:
   - deployment.yaml
+  - ingress.yaml
   - persistentvolumeclaim.yaml
   - service.yaml
