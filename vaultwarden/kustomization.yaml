@@ -4,3 +4,4 @@ namespace: vaultwarden
 resources:
   - deployment.yaml
   - persistentvolumeclaim.yaml
+  - service.yaml
