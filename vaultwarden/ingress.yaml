@@ -15,7 +15,8 @@ spec:
     - host: vaultwarden.lan
       http:
         paths:
-         - path: Prefix
+         - path: /
+           pathType: Prefix
            backend:
              service:
                name: vaultwarden
