@@ -6,5 +6,6 @@ resources:
   - external-dns.yaml
   - longhorn.yaml
   - metallb.yaml
+  - postgres-operator.yaml
   - sealed-secrets.yaml
   - vaultwarden.yaml

@@ -4,6 +4,6 @@ kind: Kustomization
 # namespace: cert-manager
 resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
-  - clusterissuer.selfsigned.yaml
+  - cluster-issuer.selfsigned.yaml
   - certificate.yaml
-  - clusterissuer.ca.yaml
+  - cluster-issuer.ca.yaml

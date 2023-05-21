@@ -4,5 +4,5 @@ namespace: vaultwarden
 resources:
   - deployment.yaml
   - ingress.yaml
-  - persistentvolumeclaim.yaml
+  - persistent-volume-claim.yaml
   - service.yaml
