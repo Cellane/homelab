@@ -38,6 +38,8 @@ spec:
           ports:
             - name: http
               containerPort: 80
+            - name: ws
+              containerPort: 3012
           volumeMounts:
           - name: data
             mountPath: /data
