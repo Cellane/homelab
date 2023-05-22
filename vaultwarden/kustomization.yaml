@@ -4,6 +4,7 @@ namespace: vaultwarden
 commonLabels:
   app: vaultwarden
 resources:
+  - config-map.yaml
   - deployment.yaml
   - ingress.http.yaml
   - ingress.https.yaml
@@ -11,4 +12,5 @@ resources:
   - persistent-volume-claim.yaml
   - postgresql.yaml
   - sealed-secret.admin-token.yaml
+  - sealed-secret.smtp-password.yaml
   - service.yaml
