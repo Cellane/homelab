@@ -2,8 +2,6 @@ apiVersion: acid.zalan.do/v1
 kind: postgresql
 metadata:
   name: vaultwarden-db
-  labels:
-    app: vaultwarden
 spec:
   teamId: vaultwarden
   numberOfInstances: 1

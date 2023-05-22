@@ -5,8 +5,6 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: ca-issuer
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
-  labels:
-    app: vaultwarden
 spec:
   tls:
     - hosts:
