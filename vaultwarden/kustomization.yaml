@@ -3,7 +3,9 @@ kind: Kustomization
 namespace: vaultwarden
 resources:
   - deployment.yaml
-  - ingress.yaml
+  - ingress.http.yaml
+  - ingress.https.yaml
+  - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
   - postgresql.yaml
   - service.yaml

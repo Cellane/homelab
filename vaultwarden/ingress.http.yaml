@@ -1,16 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: vaultwarden
+  name: vaultwarden-http
   annotations:
-    cert-manager.io/cluster-issuer: ca-issuer
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/router.middlewares: vaultwarden-redirect@kubernetescrd
   labels:
     app: vaultwarden
 spec:
-  tls:
-    - hosts:
-      - vaultwarden.lan
-      secretName: vaultwarden-tls
   rules:
     - host: vaultwarden.lan
       http:
