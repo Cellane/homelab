@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: vaultwarden-config
-data:
-  TEST: postgresql://$(DATABASE_USERNAME):${DATABASE_PASSWORD}

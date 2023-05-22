@@ -29,8 +29,8 @@ spec:
             - name: DATABASE_URL
               value: "postgresql://$(DATABASE_USERNAME):$(DATABASE_PASSWORD)@vaultwarden-db:5432/vaultwarden"
           envFrom:
-            - configMapRef:
-                name: vaultwarden-config
+            - secretRef:
+                name: admin-token
           ports:
             - name: http
               containerPort: 80
