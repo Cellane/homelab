@@ -14,13 +14,6 @@ spec:
     - host: vaultwarden.lan
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: vaultwarden
-                port:
-                  name: http
           - path: /notifications/hub
             pathType: Exact
             backend:
@@ -28,3 +21,10 @@ spec:
                 name: vaultwarden
                 port:
                   name: ws
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: vaultwarden
+                port:
+                  name: http
