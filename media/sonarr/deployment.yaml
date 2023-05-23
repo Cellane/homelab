@@ -3,14 +3,8 @@ kind: Deployment
 metadata:
   name: sonarr
 spec:
-  selector:
-    matchLabels:
-      app: sonarr
   replicas: 1
   template:
-    metadata:
-      labels:
-        app: sonarr
     spec:
       containers:
         - name: sonarr
