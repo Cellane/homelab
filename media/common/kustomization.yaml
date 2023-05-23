@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: vaultwarden
+commonLabels:
+  app: vaultwarden
+resources:
+  - config-map.yaml
+  - middleware.redirect-to-https.yaml
+  - persistent-volume-claim.yaml

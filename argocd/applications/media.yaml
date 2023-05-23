@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prowlarr
+  name: media
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Cellane/homelab.git
     targetRevision: master
-    path: prowlarr
+    path: media
   destination:
     server: https://kubernetes.default.svc
     namespace: media

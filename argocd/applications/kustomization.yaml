@@ -5,8 +5,8 @@ resources:
   - cert-manager.yaml
   - external-dns.yaml
   - longhorn.yaml
+  - media.yaml
   - metallb.yaml
   - postgres-operator.yaml
-  - prowlarr.yaml
   - sealed-secrets.yaml
   - vaultwarden.yaml
