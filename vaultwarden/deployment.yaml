@@ -41,10 +41,9 @@ spec:
             - name: ws
               containerPort: 3012
           volumeMounts:
-          - name: data
-            mountPath: /data
+            - name: data
+              mountPath: /data
       volumes:
         - name: data
           persistentVolumeClaim:
             claimName: vaultwarden-data
-      restartPolicy: Always

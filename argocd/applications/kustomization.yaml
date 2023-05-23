@@ -7,5 +7,6 @@ resources:
   - longhorn.yaml
   - metallb.yaml
   - postgres-operator.yaml
+  - prowlarr.yaml
   - sealed-secrets.yaml
   - vaultwarden.yaml
