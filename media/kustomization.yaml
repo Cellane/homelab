@@ -4,4 +4,4 @@ namespace: media
 resources:
   - common/
   - prowlarr/
-  # - sonarr/
+  - sonarr/
