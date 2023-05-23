@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: radarr
-          image: linuxserver/radarr:1.5.0-develop
+          image: linuxserver/radarr:4.5.2-develop
           envFrom:
             - configMapRef:
                 name: arr-common-config
