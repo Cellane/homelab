@@ -6,4 +6,7 @@ commonLabels:
 resources:
   - config-map.yaml
   - deployment.yaml
+  - ingress.http.yaml
+  - ingress.https.yaml
+  - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
