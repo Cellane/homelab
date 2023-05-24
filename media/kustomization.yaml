@@ -4,6 +4,7 @@ namespace: media
 resources:
   - common/
   - lidarr/
+  - plex/
   - prowlarr/
   - radarr/
   - sonarr/
