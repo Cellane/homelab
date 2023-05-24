@@ -13,6 +13,8 @@ spec:
             - configMapRef:
                 name: arr-common-config
           env:
+            - name: PLEX_CLAIM
+              value: claim-zjsWz8dndMWcHSYQeSgz
             - name: VERSION
               value: docker
           ports:
