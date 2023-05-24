@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: arr-common-config
 data:
-  PUID: "1000"
   PGID: "1000"
+  PUID: "1000"
   TZ: Asia/Tokyo

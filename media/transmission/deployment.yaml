@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transmission
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: transmission
+          image: haugene/transmission-openvpn:5.0.2
+          envFrom:
+            - configMapRef:
+                name: transmission-config
+            - secretRef:
+                name: pia-credentials
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+          ports:
+            - name: http
+              containerPort: 9091
+          volumeMounts:
+            - name: config
+              mountPath: /config
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: transmission-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: media-data

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: transmission–config
+data:
+  CREATE_TUN_DEVICE: "true"
+  LOG_TO_STDOUT: "true"
+  OPENVPN_CONFIG: japan
+  # OPENVPN_OPTS: "--inactive 3600 --ping 10 --ping-exit 60"
+  OPENVPN_PROVIDER: PIA
+  PGID: "1000"
+  PUID: "1000"
+  TRANSMISSION_DOWNLOAD_QUEUE_SIZE: "25"
+  TRANSMISSION_WEB_UI: flood-for-transmission
+  TZ: Asia/Tokyo
