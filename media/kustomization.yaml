@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: media
 resources:
   - common/
+  - jellyfin/
   - lidarr/
   - plex/
   - prowlarr/
