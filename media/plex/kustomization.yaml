@@ -9,3 +9,4 @@ resources:
   - ingress.https.yaml
   - persistent-volume-claim.yaml
   - service.yaml
+  - service.lb.yaml
