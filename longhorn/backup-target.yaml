@@ -3,5 +3,5 @@ kind: BackupTarget
 metadata:
   name: default
 spec:
-  backupTargetUrl: s3://betelgeuse-longhorn-backup@us-east-005/
+  backupTargetURL: s3://betelgeuse-longhorn-backup@us-east-005/
   credentialSecret: backblaze-credentials
