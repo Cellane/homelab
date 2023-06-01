@@ -6,6 +6,7 @@ resources:
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
+  - recurring-job.arr-config.yaml
   - sealed-secret.backup.yaml
   - setting.backup.yaml
   - nodes/
