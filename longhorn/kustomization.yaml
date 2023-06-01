@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: longhorn-system
 resources:
   - https://raw.githubusercontent.com/longhorn/longhorn/v1.4.2/deploy/longhorn.yaml
+  - backuptarget.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
