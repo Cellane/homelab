@@ -3,7 +3,7 @@ kind: RecurringJob
 metadata:
   name: arr-config
 spec:
-  cron: "*/5 * * * *"
+  cron: " */8 * * *"
   task: "backup"
   groups:
     - arr-config
