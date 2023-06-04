@@ -5,4 +5,5 @@ commonLabels:
   app: dyndns
 resources:
   - config-map.yaml
+  - cron-job.yaml
   - sealed-secret.dyndns-settings.yaml

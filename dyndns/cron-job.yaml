@@ -1,0 +1,38 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: dyndns-updater
+spec:
+  schedule: "*/1 * * * *"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: dyndns-updater
+              image: curlimages/curl:8.1.1
+              command:
+                - "/bin/sh"
+                - "/app/dyndns-updater.sh"
+              envFrom:
+                - secretRef:
+                    name: dyndns-settings
+              volumeMounts:
+                - name: dyndns-updater
+                  mountPath: /app/dyndns-updater.sh
+                  subPath: dyndns-updater.sh
+                  readOnly: true
+          restartPolicy: Never
+          volumes:
+            - name: dyndns-updater
+              projected:
+                defaultMode: 0755
+                sources:
+                  - configMap:
+                      name: dyndns-updater
+                      items:
+                        - key: dyndns-updater.sh
+                          path: dyndns-updater.sh
