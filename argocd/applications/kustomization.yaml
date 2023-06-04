@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: argocd
 resources:
   - cert-manager.yaml
-  - dyndns.yaml
+  # - dyndns.yaml
   - external-dns.yaml
   - longhorn.yaml
   - media.yaml
