@@ -23,6 +23,6 @@ data:
     ingress:
       # The first rule proxies traffic to the httpbin sample Service defined in app.yaml
       - hostname: atlantis.betelgeuse.vip
-        service: http://atlantis:80
+        service: http://atlantis.atlantis.svc.cluster.local:80
       # This rule matches any traffic which didn't match a previous rule, and responds with HTTP 404.
       - service: http_status:404
