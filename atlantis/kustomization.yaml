@@ -5,6 +5,9 @@ commonLabels:
   app: atlantis
 resources:
   - github.com/runatlantis/atlantis//kustomize
+  - ingress.http.yaml
+  - ingress.https.yaml
+  - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
   - sealed-secret.atlantis-vcs.yaml
 patches:
