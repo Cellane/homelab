@@ -6,7 +6,7 @@ commonLabels:
 resources:
   - github.com/runatlantis/atlantis//kustomize
   - persistent-volume-claim.yaml
-  # - sealed-secret.yaml
+  - sealed-secret.atlantis-vcs.yaml
 patches:
 - patch: |-
     apiVersion: apps/v1
