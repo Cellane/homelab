@@ -4,6 +4,7 @@ namespace: argocd
 resources:
   - atlantis.yaml
   - cert-manager.yaml
+  - cloudflared.yaml
   - dyndns.yaml
   - external-dns.yaml
   - longhorn.yaml

@@ -5,13 +5,9 @@ commonLabels:
   app: atlantis
 resources:
   - github.com/runatlantis/atlantis//kustomize
-  - config-map.cloudflared.yaml
-  - deployment.cloudflared.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
-  - sealed-secret.atlantis-vcs.yaml
-  - sealed-secret.tunnel-credentials.yaml
 patches:
   - path: stateful-set.atlantis.yaml
