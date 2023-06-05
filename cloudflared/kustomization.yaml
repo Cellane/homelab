@@ -6,4 +6,4 @@ commonLabels:
 resources:
   - config-map.yaml
   - deployment.yaml
-  # - sealed-secret.tunnel-credentials.yaml
+  - sealed-secret.tunnel-credentials.yaml
