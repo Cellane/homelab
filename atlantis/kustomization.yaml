@@ -1,15 +1,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: default
+namespace: atlantis
 commonLabels:
   app: atlantis
-bases:
-  - github.com/runatlantis/atnaltis//kustomize
 resources:
+  - github.com/runatlantis/atlantis//kustomize
   - persistent-volume-claim.yaml
   # - sealed-secret.yaml
-patchesStrategicMerge:
-  - |-
+patches:
+- patch: |-
     apiVersion: apps/v1
     kind: StatefulSet
     metadata:
