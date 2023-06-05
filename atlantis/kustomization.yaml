@@ -10,5 +10,6 @@ resources:
   - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
   - sealed-secret.atlantis-vcs.yaml
+  - sealed-secret.tunnel-credentials.yaml
 patches:
   - path: stateful-set.atlantis.yaml
