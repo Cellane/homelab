@@ -22,3 +22,8 @@ spec:
                 secretKeyRef:
                   name: atlantis-vcs
                   key: webhook-secret
+            - name: ATLANTIS_TFE_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: atlantis-tfe
+                  key: token
