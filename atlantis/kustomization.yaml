@@ -11,4 +11,4 @@ resources:
   - persistent-volume-claim.yaml
   - sealed-secret.atlantis-vcs.yaml
 patches:
-  - patch: stateful-set.atlantis.yaml
+  - path: stateful-set.atlantis.yaml
