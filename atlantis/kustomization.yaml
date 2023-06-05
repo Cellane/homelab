@@ -5,6 +5,8 @@ commonLabels:
   app: atlantis
 resources:
   - github.com/runatlantis/atlantis//kustomize
+  - config-map.cloudflared.yaml
+  - deployment.cloudflared.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
