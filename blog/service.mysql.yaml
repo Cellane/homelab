@@ -7,7 +7,4 @@ spec:
     app: ghost
     role: db
   ports:
-    - name: mysql
-      protocol: TCP
-      port: 3306
-      targetPort: mysql
+    - port: 3306
