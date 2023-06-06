@@ -21,3 +21,17 @@ spec:
           scheme: h2c
   tls:
     secretName: argocd-lan
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`traefik.lan`)
+      services:
+        - name: api@internal
+          kind: TraefikService
