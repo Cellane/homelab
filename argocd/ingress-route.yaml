@@ -2,8 +2,6 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: argocd-server
-  annotations:
-    cert-manager.io/cluster-issuer: ca-issuer
 spec:
   entryPoints:
     - websecure
@@ -21,6 +19,4 @@ spec:
           port: 80
           scheme: h2c
   tls:
-    certResolver: default
-    domains:
-      - argocd.lan
+    secretName: argocd-lan
