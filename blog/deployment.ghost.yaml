@@ -8,6 +8,7 @@ spec:
     spec:
       metadata:
         labels:
+          app: blog
           role: web
       containers:
         - name: ghost

@@ -10,6 +10,7 @@ spec:
     spec:
       metadata:
         labels:
+          app: blog
           role: db
       containers:
         - name: mysql
