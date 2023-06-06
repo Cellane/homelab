@@ -7,4 +7,4 @@ resources:
   - application.yaml
   - applications/
 patches:
-  - path: svc.load-balancer.yaml
+  - path: config-map.argocd-cmd-params-cm.yaml
