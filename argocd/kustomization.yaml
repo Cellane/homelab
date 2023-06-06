@@ -8,5 +8,6 @@ resources:
   - applications/
   - certificate.yaml
   - ingress-route.yaml
+  - middleware.redirect-to-https.yaml
 patches:
   - path: config-map.argocd-cmd-params-cm.yaml
