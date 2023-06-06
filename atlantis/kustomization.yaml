@@ -9,7 +9,6 @@ resources:
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
-  - persistent-volume-claim.yaml
   - sealed-secret.atlantis-tfe.yaml
   - sealed-secret.atlantis-vcs.yaml
 patches:
