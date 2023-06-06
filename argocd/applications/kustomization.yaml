@@ -10,7 +10,6 @@ resources:
   - longhorn.yaml
   - media.yaml
   - metallb.yaml
-  - mysql-operator.yaml
   - postgres-operator.yaml
   - sealed-secrets.yaml
   - vaultwarden.yaml
