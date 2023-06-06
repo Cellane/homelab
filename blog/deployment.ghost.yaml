@@ -13,8 +13,8 @@ spec:
         - name: ghost
           image: ghost:5.49.3-alpine
           envFrom:
-            configMapRef:
-              name: ghost-config
+            - configMapRef:
+                name: ghost-config
           env:
             - name: database__connection__user
               valueFrom:
