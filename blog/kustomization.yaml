@@ -5,8 +5,12 @@ commonLabels:
   app: blog
 resources:
   - deployment.ghost.yaml
+  - deployment.mysql.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
   - persistent-volume-claim.ghost-data.yaml
-  - service.yaml
+  - persistent-volume-claim.mysql-data.yaml
+  - sealed-secret.mysql-credentials.yaml
+  - service.ghost.yaml
+  - service.mysql.yaml
