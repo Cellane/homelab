@@ -2,5 +2,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: mysql-operator
 resources:
-  - https://raw.githubusercontent.com/mysql/mysql-operator/trunk/deploy/deploy-crds.yaml
-  - https://raw.githubusercontent.com/mysql/mysql-operator/trunk/deploy/deploy-operator.yaml
+  - https://raw.githubusercontent.com/percona/percona-xtradb-cluster-operator/v1.12.0/deploy/bundle.yaml
