@@ -3,3 +3,10 @@ kind: Kustomization
 namespace: blog
 commonLabels:
   app: blog
+resources:
+  - deployment.ghost.yaml
+  - ingress.http.yaml
+  - ingress.https.yaml
+  - middleware.redirect-to-https.yaml
+  - persistent-volume-claim.ghost-data.yaml
+  - service.yaml

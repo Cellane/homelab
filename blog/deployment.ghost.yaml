@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost
+tspec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: ghost
+          image: ghost:5.49.3-alpine
+          env:
+            - name: NODE_ENV
+              value: production
+          ports:
+            - name: http
+              containerPort: 2368
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/ghost/content
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: ghost-data
