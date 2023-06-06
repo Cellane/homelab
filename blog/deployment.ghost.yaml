@@ -12,9 +12,20 @@ spec:
       containers:
         - name: ghost
           image: ghost:5.49.3-alpine
+          envFrom:
+            configMapRef:
+              name: ghost-config
           env:
-            - name: NODE_ENV
-              value: production
+            - name: database__connection__user
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: user-username
+            - name: database__connection__password
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-credentials
+                  key: user-password
           ports:
             - name: http
               containerPort: 2368

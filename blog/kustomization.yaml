@@ -4,6 +4,7 @@ namespace: blog
 commonLabels:
   app: blog
 resources:
+  - config-map.ghost.yaml
   - deployment.ghost.yaml
   - deployment.mysql.yaml
   - ingress.http.yaml

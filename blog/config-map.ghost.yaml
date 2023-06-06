@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ghost-config
+data:
+  url: https://blog.lan
+  database__client: mysql
+  database__connection__host: mysql
+  database__connection__port: 3306
+  database__connection__database: blog
+
