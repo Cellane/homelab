@@ -5,11 +5,10 @@ metadata:
 spec:
   replicas: 0
   template:
+    metadata:
+      labels:
+        role: web
     spec:
-      metadata:
-        labels:
-          app: blog
-          role: web
       containers:
         - name: ghost
           image: ghost:5.49.3-alpine

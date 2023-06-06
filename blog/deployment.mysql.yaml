@@ -7,11 +7,10 @@ spec:
   strategy:
     type: Recreate
   template:
+    metadata:
+      labels:
+        role: db
     spec:
-      metadata:
-        labels:
-          app: blog
-          role: db
       containers:
         - name: mysql
           image: mysql:8.0.33
