@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: argocd
 resources:
   - atlantis.yaml
+  - blog.yaml
   - cert-manager.yaml
   - cloudflared.yaml
   - dyndns.yaml
