@@ -4,7 +4,6 @@ namespace: blog
 commonLabels:
   app: blog
 resources:
-  - config-map.ghost.yaml
   - deployment.ghost.yaml
   - deployment.mysql.yaml
   - ingress.http.yaml
@@ -15,3 +14,11 @@ resources:
   - sealed-secret.mysql-credentials.yaml
   - service.ghost.yaml
   - service.mysql.yaml
+configMapGenerator:
+  - name: ghost-config
+    literals:
+      - url=https://new.milanvit.net
+      - database__client=mysql
+      - database__connection__host=mysql
+      - database__connection__port="3306"
+      - database__connection__database=blog

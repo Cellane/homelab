@@ -4,7 +4,6 @@ namespace: vaultwarden
 commonLabels:
   app: vaultwarden
 resources:
-  - config-map.yaml
   - deployment.yaml
   - ingress.http.yaml
   - ingress.https.yaml
@@ -14,3 +13,14 @@ resources:
   - sealed-secret.admin-token.yaml
   - sealed-secret.smtp-password.yaml
   - service.yaml
+configMapGenerator:
+  - name: vaultwarden-config
+    literals:
+      - DOMAIN=https://vaultwarden.lan
+      - INVITATION_ORG_NAME=Betelgeuse Vaultwarden
+      - SIGNUPS_ALLOWED=false
+      - SMTP_FROM=bitwarden@milanvit.net
+      - SMTP_FROM_NAME=Betelgeuse Vaultwarden
+      - SMTP_HOST=mail.milanvit.net
+      - SMTP_USERNAME=bitwarden@milanvit.net
+      - WEBSOCKET_ENABLED=true
