@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-server
+  name: argocd-server-https
 spec:
   entryPoints:
     - websecure
@@ -21,28 +21,3 @@ spec:
           scheme: h2c
   tls:
     secretName: argocd-lan
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: redirect
-spec:
-  redirectScheme:
-    scheme: https
-    permanent: true
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: argocd-server-http
-spec:
-  entryPoints:
-    - web
-  routes:
-    - kind: Rule
-      match: Host(`argocd.lan`)
-      middlewares:
-        - name: redirect
-      services:
-        - name: argocd-server
-          port: 80
