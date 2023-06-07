@@ -4,6 +4,11 @@ namespace: vaultwarden
 commonLabels:
   app: vaultwarden
 resources:
-  - config-map.yaml
   - middleware.redirect-to-https.yaml
   - persistent-volume-claim.yaml
+configMapGenerator:
+  - name: arr-common-config
+    literals:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Asia/Tokyo
