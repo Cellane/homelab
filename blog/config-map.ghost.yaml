@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: ghost-config
 data:
-  url: https://blog.lan
+  url: https://new.milanvit.net
   database__client: mysql
   database__connection__host: mysql
   database__connection__port: "3306"
