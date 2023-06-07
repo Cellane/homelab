@@ -4,6 +4,9 @@ namespace: default
 commonLabels:
   app: dyndns
 resources:
-  - config-map.yaml
   - cron-job.yaml
   - sealed-secret.dyndns-settings.yaml
+configMapGenerator:
+  - name: dyndns-updater
+    files:
+      - resources/dyndns-updater.sh

@@ -1,0 +1,35 @@
+{
+  "workflows": {
+    "default": {
+      "plan": {
+        "steps": [
+          {
+            "run": "terraform init -input=false -no-color"
+          },
+          {
+            "run": "terraform plan -input=false -no-color"
+          }
+        ]
+      },
+      "apply": {
+        "steps": [
+          {
+            "run": "terraform apply -auto-approve -input=false -no-color"
+          }
+        ]
+      }
+    }
+  },
+  "repos": [
+    {
+      "id": "/.*/",
+      "allowed_overrides": [
+        "apply_requirements",
+        "import_requirements",
+        "plan_requirements",
+        "workflow"
+      ],
+      "allow_custom_workflows": true,
+    }
+  ]
+}

@@ -4,6 +4,9 @@ namespace: cloudflared
 commonLabels:
   app: cloudflared
 resources:
-  - config-map.yaml
   - deployment.yaml
   - sealed-secret.tunnel-credentials.yaml
+configMapGenerator:
+  - name: cloudflared
+    files:
+      - resources/config.yaml

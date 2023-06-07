@@ -5,7 +5,6 @@ commonLabels:
   app: atlantis
 resources:
   - github.com/runatlantis/atlantis//kustomize
-  - config-map.repo-config.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
@@ -13,3 +12,7 @@ resources:
   - sealed-secret.atlantis-vcs.yaml
 patches:
   - path: stateful-set.atlantis.yaml
+configMapGenerator:
+  - name: repo-config
+    files:
+      - resources/repo_config.json
