@@ -7,6 +7,6 @@ resources:
   - deployment.yaml
   - sealed-secret.tunnel-credentials.yaml
 configMapGenerator:
-  - name: cloudflared
+  - name: cloudflared-config
     files:
       - resources/config.yaml
