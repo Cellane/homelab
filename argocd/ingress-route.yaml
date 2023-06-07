@@ -43,3 +43,6 @@ spec:
       match: Host(`argocd.lan`)
       middlewares:
         - name: redirect
+      services:
+        - name: argocd-server
+          port: 80
