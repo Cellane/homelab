@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - linuxserver/sonarr:develop-4.0.0.538-ls499
