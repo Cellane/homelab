@@ -15,4 +15,4 @@ images:
 - name: linuxserver/radarr
   newTag: develop-4.6.1.7456-ls100
 - name: linuxserver/sonarr
-  newTag: develop-4.0.0.538-ls499
+  newTag: develop-4.0.0.539-ls500
