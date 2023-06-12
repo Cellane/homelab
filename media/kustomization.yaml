@@ -2,12 +2,17 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: media
 resources:
-  - common/
-  - bazarr/
-  - jellyfin/
-  - lidarr/
-  # - plex/
-  - prowlarr/
-  - radarr/
-  - sonarr/
-  - transmission/
+- common/
+- bazarr/
+- jellyfin/
+- lidarr/
+# - plex/
+- prowlarr/
+- radarr/
+- sonarr/
+- transmission/
+images:
+- name: linuxserver/radarr
+  newTag: develop-4.6.1.7456-ls100
+- name: linuxserver/sonarr
+  newTag: develop-4.0.0.538-ls499
