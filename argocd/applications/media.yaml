@@ -3,6 +3,12 @@ kind: Application
 metadata:
   name: media
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    # argocd-image-updater.argoproj.io/write-back-target: kustomization
+    argocd-image-updater.argoproj.io/image-list: sonarr=linuxserver/sonarr
+    argocd-image-updater.argoproj.io/sonarr.update-strategy: name
+    argocd-image-updater.argoproj.io/sonarr.allow-tags: regexp:^develop-4(\.\d+)+-ls\d+$
 spec:
   project: default
   source:
