@@ -19,8 +19,8 @@ configMapGenerator:
       - DOMAIN=https://vaultwarden.lan
       - INVITATION_ORG_NAME=Betelgeuse Vaultwarden
       - SIGNUPS_ALLOWED=false
-      - SMTP_FROM=bitwarden@milanvit.net
+      - SMTP_FROM=vaultwarden@milanvit.net
       - SMTP_FROM_NAME=Betelgeuse Vaultwarden
-      - SMTP_HOST=mail.milanvit.net
-      - SMTP_USERNAME=bitwarden@milanvit.net
+      - SMTP_HOST=smtp.startmail.com
+      - SMTP_USERNAME=milanvit@milanvit.net
       - WEBSOCKET_ENABLED=true
