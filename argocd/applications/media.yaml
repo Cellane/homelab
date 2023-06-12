@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Cellane/homelab.git
+    repoURL: git@github.com:Cellane/homelab.git
     targetRevision: master
     path: media
   destination:
