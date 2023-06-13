@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: bazarr=linuxserver/bazarr:latest, jellyfin=linuxserver/jellyfin:10.x, lidarr=linuxserver/lidarr:develop, prowlarr=linuxserever/prowlarr:develop radarr=linuxserver/radarr:develop, sonarr=linuxserver/sonarr:develop, transmission=haugene/transmission-openvpn:5.x
+    argocd-image-updater.argoproj.io/image-list: bazarr=linuxserver/bazarr:latest, jellyfin=linuxserver/jellyfin:10.x, lidarr=linuxserver/lidarr:develop, prowlarr=linuxserver/prowlarr:develop radarr=linuxserver/radarr:develop, sonarr=linuxserver/sonarr:develop, transmission=haugene/transmission-openvpn:5.x
     argocd-image-updater.argoproj.io/bazarr.update-strategy: digest
     argocd-image-updater.argoproj.io/jellyfin.allow-tags: regexp:^10\..*$
     argocd-image-updater.argoproj.io/jellyfin.update-strategy: semver
