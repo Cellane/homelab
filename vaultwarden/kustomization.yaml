@@ -24,3 +24,6 @@ configMapGenerator:
   - SMTP_HOST=smtp.startmail.com
   - SMTP_USERNAME=milanvit@milanvit.net
   - WEBSOCKET_ENABLED=true
+images:
+- name: vaultwarden/server
+  newTag: 1.28.1
