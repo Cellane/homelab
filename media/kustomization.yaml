@@ -12,17 +12,15 @@ resources:
 - sonarr/
 - transmission/
 images:
-- name: linuxserver/radarr
-  newTag: develop-4.6.1.7456-ls100
-- name: linuxserver/sonarr
-  digest: sha256:c5e3eea6bceab22bc5c5855c5e3e7df44981bdf1c8ffb35ee2d8a5368d44f766
 - name: linuxserver/bazarr
   digest: sha256:82279d659a308c2e7363c472a128b88e76d600e7843098fb93e64273c3432134
 - name: linuxserver/jellyfin
   newTag: 10.8.10
 - name: linuxserver/lidarr
   digest: sha256:ae7f9bc964c17ab4f4ba9b87da6fa8505a4b9d5b2e10fa96fa43532ff33b5b58
-- name: linuxserver/prowlarr
-  digest: dummy
+- name: linuxserver/radarr
+  newTag: develop-4.6.1.7456-ls100
+- name: linuxserver/sonarr
+  digest: sha256:c5e3eea6bceab22bc5c5855c5e3e7df44981bdf1c8ffb35ee2d8a5368d44f766
 - name: haugene/transmission-openvpn
   newTag: 5.0.2
