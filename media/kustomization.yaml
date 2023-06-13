@@ -15,9 +15,9 @@ images:
 - name: linuxserver/radarr
   newTag: develop-4.6.1.7456-ls100
 - name: linuxserver/sonarr
-  digest: dummy
+  digest: sha256:c5e3eea6bceab22bc5c5855c5e3e7df44981bdf1c8ffb35ee2d8a5368d44f766
 - name: linuxserver/bazarr
-  digest: sha256:3dda85b4539181ec8ab3c588b948e84599324635e477830b4dc75cf78bee14f7
+  digest: sha256:82279d659a308c2e7363c472a128b88e76d600e7843098fb93e64273c3432134
 - name: linuxserver/jellyfin
   newTag: 10.8.10
 - name: linuxserver/lidarr
