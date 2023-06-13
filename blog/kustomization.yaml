@@ -4,27 +4,30 @@ namespace: blog
 commonLabels:
   app: blog
 resources:
-  - deployment.ghost.yaml
-  - deployment.mysql.yaml
-  # - ingress.http.yaml
-  # - ingress.https.yaml
-  # - middleware.redirect-to-https.yaml
-  - persistent-volume-claim.ghost-data.yaml
-  - persistent-volume-claim.mysql-data.yaml
-  - sealed-secret.mysql-credentials.yaml
-  - service.ghost.yaml
-  - service.mysql.yaml
-  - sealed-secret.smtp-password.yaml
+- deployment.ghost.yaml
+- deployment.mysql.yaml
+# - ingress.http.yaml
+# - ingress.https.yaml
+# - middleware.redirect-to-https.yaml
+- persistent-volume-claim.ghost-data.yaml
+- persistent-volume-claim.mysql-data.yaml
+- sealed-secret.mysql-credentials.yaml
+- service.ghost.yaml
+- service.mysql.yaml
+- sealed-secret.smtp-password.yaml
 configMapGenerator:
-  - name: ghost-config
-    literals:
-      - url=https://www.milanvit.net
-      - database__client=mysql
-      - database__connection__host=mysql
-      - database__connection__port="3306"
-      - database__connection__database=blog
-      - mail__transport=SMTP
-      - mail__from=blog@milanvit.net
-      - mail__options__host=smtp.startmail.com
-      - mail__options__port=587
-      - mail__options__auth__user=milanvit@milanvit.net
+- name: ghost-config
+  literals:
+  - url=https://www.milanvit.net
+  - database__client=mysql
+  - database__connection__host=mysql
+  - database__connection__port="3306"
+  - database__connection__database=blog
+  - mail__transport=SMTP
+  - mail__from=blog@milanvit.net
+  - mail__options__host=smtp.startmail.com
+  - mail__options__port=587
+  - mail__options__auth__user=milanvit@milanvit.net
+images:
+- name: ghost
+  newTag: 5.51.0
