@@ -4,23 +4,26 @@ namespace: vaultwarden
 commonLabels:
   app: vaultwarden
 resources:
-  - deployment.yaml
-  - ingress.http.yaml
-  - ingress.https.yaml
-  - middleware.redirect-to-https.yaml
-  - persistent-volume-claim.yaml
-  - postgresql.yaml
-  - sealed-secret.admin-token.yaml
-  - sealed-secret.smtp-password.yaml
-  - service.yaml
+- deployment.yaml
+- ingress.http.yaml
+- ingress.https.yaml
+- middleware.redirect-to-https.yaml
+- persistent-volume-claim.yaml
+- postgresql.yaml
+- sealed-secret.admin-token.yaml
+- sealed-secret.smtp-password.yaml
+- service.yaml
 configMapGenerator:
-  - name: vaultwarden-config
-    literals:
-      - DOMAIN=https://vaultwarden.lan
-      - INVITATION_ORG_NAME=Betelgeuse Vaultwarden
-      - SIGNUPS_ALLOWED=false
-      - SMTP_FROM=vaultwarden@milanvit.net
-      - SMTP_FROM_NAME=Betelgeuse Vaultwarden
-      - SMTP_HOST=smtp.startmail.com
-      - SMTP_USERNAME=milanvit@milanvit.net
-      - WEBSOCKET_ENABLED=true
+- name: vaultwarden-config
+  literals:
+  - DOMAIN=https://vaultwarden.lan
+  - INVITATION_ORG_NAME=Betelgeuse Vaultwarden
+  - SIGNUPS_ALLOWED=false
+  - SMTP_FROM=vaultwarden@milanvit.net
+  - SMTP_FROM_NAME=Betelgeuse Vaultwarden
+  - SMTP_HOST=smtp.startmail.com
+  - SMTP_USERNAME=milanvit@milanvit.net
+  - WEBSOCKET_ENABLED=true
+images:
+- name: vaultwarden/server
+  newTag: 1.28.1
