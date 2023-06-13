@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: ghost
-          image: ghost:5.49.3-alpine
+          image: ghost@sha256:4540063588cbabc52c752b7a8571da17e68f6736db34671801cbb7922228b895
           envFrom:
             - configMapRef:
                 name: ghost-config
