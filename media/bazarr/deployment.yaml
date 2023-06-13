@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: bazarr
-          image: linuxserver/bazarr:1.2.1
+          image: linuxserver/bazarr@sha256:3dda85b4539181ec8ab3c588b948e84599324635e477830b4dc75cf78bee14f7
           envFrom:
             - configMapRef:
                 name: arr-common-config
