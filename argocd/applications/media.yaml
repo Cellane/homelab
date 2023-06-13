@@ -6,11 +6,16 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: radarr=linuxserver/radarr, sonarr=linuxserver/sonarr
-    argocd-image-updater.argoproj.io/radarr.update-strategy: name
-    argocd-image-updater.argoproj.io/radarr.allow-tags: regexp:^develop-4(\.\d+)+-ls\d+$
-    argocd-image-updater.argoproj.io/sonarr.update-strategy: name
-    argocd-image-updater.argoproj.io/sonarr.allow-tags: regexp:^develop-4(\.\d+)+-ls\d+$
+    argocd-image-updater.argoproj.io/image-list: bazarr=linuxserver/bazarr:latest, jellyfin=linuxserver/jellyfin:10.x, lidarr=linuxserver/lidarr:develop, prowlarr=linuxserever/prowlarr:develop radarr=linuxserver/radarr:develop, sonarr=linuxserver/sonarr:develop, transmission=haugene/transmission:5.x
+    argocd-image-updater.argoproj.io/bazarr.update-strategy: digest
+    argocd-image-updater.argoproj.io/jellyfin.allow-tags: regexp:^10\..*$
+    argocd-image-updater.argoproj.io/jellyfin.update-strategy: semver
+    argocd-image-updater.argoproj.io/lidarr.update-strategy: digest
+    argocd-image-updater.argoproj.io/prowlarr.update-strategy: digest
+    argocd-image-updater.argoproj.io/radarr.update-strategy: digest
+    argocd-image-updater.argoproj.io/sonarr.update-strategy: digest
+    argocd-image-updater.argoproj.io/transmission.allow-tags: regexp:^5\..*$
+    argocd-image-updater.argoproj.io/transmission.update-strategy: semver
 spec:
   project: default
   source:
