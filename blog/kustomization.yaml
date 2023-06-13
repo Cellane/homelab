@@ -28,3 +28,6 @@ configMapGenerator:
   - mail__options__host=smtp.startmail.com
   - mail__options__port=587
   - mail__options__auth__user=milanvit@milanvit.net
+images:
+- name: ghost
+  digest: sha256:7023d159f35250e85ea67727b3aee1c4de4a0d96c4eb96cc87ff24cf8657e735
