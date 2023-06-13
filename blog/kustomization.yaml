@@ -21,7 +21,7 @@ configMapGenerator:
   - url=https://www.milanvit.net
   - database__client=mysql
   - database__connection__host=mysql
-  - database__connection__port="3306"
+  - database__connection__port=3306
   - database__connection__database=blog
   - mail__transport=SMTP
   - mail__from=blog@milanvit.net
