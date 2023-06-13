@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: prowlarr
-          image: linuxserver/prowlarr:1.5.0-develop
+          image: linuxserver/prowlarr@sha256:40cae358c91a381c9a1a26f1657c2a4e11bfb08ee2de8cbe5d53c4afdfe877a3
           envFrom:
             - configMapRef:
                 name: arr-common-config

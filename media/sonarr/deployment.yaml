@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: sonarr
-          image: linuxserver/sonarr:4.0.0-develop
+          image: linuxserver/sonarr@sha256:540d2b65fdbaffc2e2c7939b35dcb8fb75facf4b2e4297b54037993ce28d4a19
           envFrom:
             - configMapRef:
                 name: arr-common-config
