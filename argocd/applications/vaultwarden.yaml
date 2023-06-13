@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: vaultwarden
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
+    argocd-image-updater.argoproj.io/image-list: vaultwarden=vaultwarden/server:1.x
+    argocd.image-updater.argoproj.io/vaultwarden.allow-tags: regexp:.*-alpine$
 spec:
   project: default
   source:
