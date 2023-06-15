@@ -14,3 +14,4 @@ resources:
 patches:
   - path: config-map.argocd-cmd-params-cm.yaml
   # - path: config-map.argocd-image-updater-config.yaml
+  - path: deployment.argocd-image-updater.yaml
