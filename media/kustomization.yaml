@@ -13,7 +13,7 @@ resources:
 - transmission/
 images:
 - name: linuxserver/bazarr
-  digest: sha256:15b7cd7f3b0567b0348ab57fa960a9be576ec0a62e61ab2df44856651cbcf915
+  digest: sha256:be9ff16419800702e3d2c80aa7a2b1ba35bcb6bb115c1b8c110cc08cb5e12e94
 - name: linuxserver/jellyfin
   newTag: 10.8.10
 - name: linuxserver/lidarr
@@ -23,6 +23,6 @@ images:
 - name: linuxserver/radarr
   digest: sha256:e397bad43a0ad4186aa5ba34eb8b55e52da3f47a16c1a4aa019f72488bec4d53
 - name: linuxserver/sonarr
-  digest: sha256:27a30c1b2eb3d0a87f226ced2dd683ad839cb5b805f24139e20baf4625335a21
+  digest: sha256:9510ae7e668343d870a1d7a259c1c8a976bdd4e4c59f4c5c273b4b0ee48066dd
 - name: haugene/transmission-openvpn
   newTag: 5.0.2
