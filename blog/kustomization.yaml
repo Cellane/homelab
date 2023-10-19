@@ -30,4 +30,4 @@ configMapGenerator:
   - mail__options__auth__user=milanvit@milanvit.net
 images:
 - name: ghost
-  digest: sha256:78c2fca228743afc6e649dd2fc16ad71a6bd9b0eadff09220465b85855517634
+  digest: sha256:3d4387d8a5230c298964e76471f961e67266adf61e45fd36fc73955f199a0b48
