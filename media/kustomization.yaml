@@ -19,10 +19,10 @@ images:
 - name: linuxserver/lidarr
   digest: sha256:8751a45bfe9f2b6382525678738db2b38b9c3e2d9243e7bedda0d7a796ca5db0
 - name: linuxserver/prowlarr
-  digest: sha256:982706abc85baf6481378abb22010da0b50c48d47773995f4b3d100b671e9edf
+  digest: sha256:66563854a7d80fe344026caa18a732f6b77338d142cd6ba06039237b389e0654
 - name: linuxserver/radarr
-  digest: sha256:230f13b739de1ca8223634c0a8c110ef9db2568ba2699158254d4d9516bbc442
+  digest: sha256:01f7f8b40b44ace7433da6e96d572e6a01908ccf0655ab2767a722e6cb7944cc
 - name: linuxserver/sonarr
   digest: sha256:673527d11bd67e788f4f863b40eba0f5553cc5b85ad9418d4086aefe268fb1ba
 - name: haugene/transmission-openvpn
-  newTag: "5.2"
+  newTag: 5.2.0
