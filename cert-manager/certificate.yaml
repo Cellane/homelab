@@ -6,7 +6,7 @@ spec:
   isCA: true
   commonName: Betelgeuse CA
   secretName: root-secret
-  duration: 87600h # 10 years
+  duration: 87600h0m0s # 10 years
   privateKey:
     algorithm: ECDSA
     size: 256
