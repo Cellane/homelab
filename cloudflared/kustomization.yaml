@@ -4,9 +4,12 @@ namespace: cloudflared
 commonLabels:
   app: cloudflared
 resources:
-  - deployment.yaml
-  - sealed-secret.tunnel-credentials.yaml
+- deployment.yaml
+- sealed-secret.tunnel-credentials.yaml
 configMapGenerator:
-  - name: cloudflared-config
-    files:
-      - resources/config.yaml
+- name: cloudflared-config
+  files:
+  - resources/config.yaml
+images:
+- name: cloudflare/cloudflared
+  newTag: 2024.4.1
