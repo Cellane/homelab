@@ -3,7 +3,7 @@ kind: RecurringJob
 metadata:
   name: blog
 spec:
-  cron: "0 * * * *"
+  cron: "0 0 * * *"
   task: "backup"
   groups:
     - blog
