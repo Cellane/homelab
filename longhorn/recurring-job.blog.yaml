@@ -1,11 +1,11 @@
 apiVersion: longhorn.io/v1beta1
 kind: RecurringJob
 metadata:
-  name: arr-config
+  name: blog
 spec:
-  cron: "0 0 * * *"
+  cron: "0 * * * *"
   task: "backup"
   groups:
-    - arr-config
-  retain: 7
+    - blog
+  retain: 30
   concurrency: 1
