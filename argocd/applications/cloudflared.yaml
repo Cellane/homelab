@@ -3,6 +3,10 @@ kind: Application
 metadata:
   name: cloudflared
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
+    argocd-image-updater.argoproj.io/image-list: cloudflare/cloudflared
 spec:
   project: default
   source:
