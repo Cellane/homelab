@@ -6,7 +6,7 @@ spec:
   teamId: vaultwarden
   numberOfInstances: 1
   volume:
-    size: 1Gi
+    size: 2Gi
   users:
     admin:
       - superuser
