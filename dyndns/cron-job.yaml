@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: dyndns-updater
 spec:
-  schedule: "* * * * *"
+  schedule: "*/15 * * * *"
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 3
   concurrencyPolicy: Forbid
