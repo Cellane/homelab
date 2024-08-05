@@ -15,7 +15,7 @@ images:
 - name: linuxserver/bazarr
   digest: sha256:90642253b7f26c7dbf61841797083148e8f9770d0d42fa3c572fb32e5f4b28f3
 - name: linuxserver/jellyfin
-  newTag: 10.9.8
+  newTag: 10.9.9
 - name: linuxserver/lidarr
   digest: sha256:a5cfe60582922244955a0e666560df0fd896eb3afb91a797a8aff6619419ad20
 - name: linuxserver/prowlarr
