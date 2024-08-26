@@ -5,3 +5,4 @@ commonLabels:
   app: peca
 resources:
   - cron-job.yaml
+  - sealed-secret.yaml

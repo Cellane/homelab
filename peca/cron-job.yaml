@@ -26,3 +26,6 @@ spec:
                   value: Asia/Tokyo
                 - name: VPN_SERVICE_PROVIDER
                   value: private internet access
+              envFrom:
+                - secretRef:
+                    name: pia-credentials
