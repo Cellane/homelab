@@ -13,7 +13,7 @@ spec:
         spec:
           containers:
             - name: dyndns-updater
-              image: curlimages/curl:8.1.1
+              image: curlimages/curl:8.9.1
               command:
                 - "/bin/sh"
                 - "/app/dyndns-updater.sh"

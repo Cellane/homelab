@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: cat-referral
 spec:
-  schedule: "*/6 18 * * *"
+  schedule: "* * * * *"
   failedJobsHistoryLimit: 1
   successfulJobsHistoryLimit: 3
   concurrencyPolicy: Forbid
@@ -29,4 +29,24 @@ spec:
               envFrom:
                 - secretRef:
                     name: pia-credentials
+            - name: cat-referral
+              image: curlimages/curl:8.9.1
+              command:
+                - "/bin/sh"
+                - "/app/cat-referral.sh"
+              volumeMounts:
+                - name: cat-referral
+                  mountPath: /app/cat-referral.sh
+                  subPath: cat-referral.sh
+                  readOnly: true
           restartPolicy: Never
+          volumes:
+            - name: cat-referral
+              projected:
+                defaultMode: 0755
+                sources:
+                  - configMap:
+                      name: cat-referral
+                      items:
+                        - key: cat-referral.sh
+                          path: cat-referral.sh

@@ -6,3 +6,7 @@ commonLabels:
 resources:
   - cron-job.yaml
   - sealed-secret.yaml
+configMapGenerator:
+  - name: cat-referral
+    files:
+      - resources/cat-referral.sh
