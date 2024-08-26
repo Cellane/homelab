@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: peca
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
+    argocd-image-updater.argoproj.io/image-list: gluetun=qmcgaw/gluetun:latest
+    argocd-image-updater.argoproj.io/gluetun.update-strategy: digest
 spec:
   project: default
   source:

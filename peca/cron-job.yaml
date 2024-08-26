@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cat-referral
+spec:
+  schedule: "*/6 18 * * *"
+  failedJobsHistoryLimit: 1
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: gluetun
+              image: qmcgaw/gluetun:latest
+              imagePullPolicy: Always
+              securityContext:
+                capabilities:
+                  add:
+                    - NET_ADMIN
+              ports:
+                - containerPort: 9091
+              env:
+                - name: TZ
+                  value: Asia/Tokyo
+                - name: VPN_SERVICE_PROVIDER
+                  value: private internet access
