@@ -12,4 +12,4 @@ configMapGenerator:
   - resources/config.yaml
 images:
 - name: cloudflare/cloudflared
-  newTag: 2024.9.1
+  newTag: 2024.10.0
