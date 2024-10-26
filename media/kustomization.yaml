@@ -17,11 +17,11 @@ images:
 - name: linuxserver/jellyfin
   newTag: 10.9.11
 - name: linuxserver/lidarr
-  digest: sha256:b57ba9220fbf31fbc445232bd64f02635c64a165d72cf92c3f536c6699787ab0
+  digest: sha256:4f0bc4a01f164571c04b85de419a6d0c425b609b121aea487f2ad93e133e6ce5
 - name: linuxserver/prowlarr
   digest: sha256:48359b8dd620bb92b1df7208b30d4b1e916883a715d97d47e50925b5b21f8703
 - name: linuxserver/radarr
-  digest: sha256:81759ef95888ab7ece26e0525eb90f9f2503f34b60bbeae3f9bb7eb20cea294b
+  digest: sha256:a2e366ef9978793664f99b16643d135c46407eb810eacf1ab31b63e8c327c6ac
 - name: linuxserver/sonarr
   digest: sha256:ead8dcfdcef034c64c3924ccb1905c8519076c791bb76079b1790ac3aed413e6
 - name: haugene/transmission-openvpn
