@@ -15,14 +15,14 @@ images:
 - name: linuxserver/bazarr
   digest: sha256:5d14a485da91fee59fa5b7928252b033ba106d30f4dd7ab081f4b7ad6326f472
 - name: linuxserver/jellyfin
-  newTag: 10.9.11
+  newTag: 10.10.0
 - name: linuxserver/lidarr
   digest: sha256:4f0bc4a01f164571c04b85de419a6d0c425b609b121aea487f2ad93e133e6ce5
 - name: linuxserver/prowlarr
   digest: sha256:48359b8dd620bb92b1df7208b30d4b1e916883a715d97d47e50925b5b21f8703
 - name: linuxserver/radarr
-  digest: sha256:a2e366ef9978793664f99b16643d135c46407eb810eacf1ab31b63e8c327c6ac
+  digest: sha256:2091c9570bbac7a08532f78ff0d12075b68a331be907f8910b065ed205c9ab37
 - name: linuxserver/sonarr
-  digest: sha256:ead8dcfdcef034c64c3924ccb1905c8519076c791bb76079b1790ac3aed413e6
+  digest: sha256:bf515406b01f747d16c8361262a87f7f380034874fcb51b3cca3d1852eb0f3d7
 - name: haugene/transmission-openvpn
   newTag: 5.3.1
