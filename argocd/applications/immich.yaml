@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: immich
+  namespace: immich
+  annotation:
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-target: kustomization
+    argocd-image-updater.argoproj.io/image-list: immich=ghcr.io/immich-app/immich-server:v1.x
+    argocd-image-updater.argoproj.io/immich.update-strategy: semver
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:Cellane/homelab.git
+    targetRevision: master
+    path: immich
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: immich
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

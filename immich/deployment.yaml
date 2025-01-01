@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: storage-test
+spec:
+  selector:
+    matchLabels:
+      app: storage-test
+  template:
+    metadata:
+      labels:
+        app: storage-test
+    spec:
+      container:
+        - name: alpine
+          image: alpine:latest
+          command: ["sh", "-c", "while true; do sleep 3600; done"]
+          volumeMounts:
+            - name: immich-data
+              mountPath: /data
+      volumes:
+        - name: immich-data
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/immich
