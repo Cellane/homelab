@@ -9,7 +9,6 @@ resources:
   - deployment.yaml
   - persistent-volume.yaml
   - postgresql.yaml
-  - storage-class.yaml
 images:
 - name: ghcr.io/immich-app/immich-server
   newTag: v1.123.0
