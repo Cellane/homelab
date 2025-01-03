@@ -9,7 +9,7 @@ resources:
   - cluster-config.yaml
   - dyndns.yaml
   - external-dns.yaml
-  - immich.yaml
+  # - immich.yaml
   - longhorn.yaml
   - media.yaml
   - metallb.yaml
