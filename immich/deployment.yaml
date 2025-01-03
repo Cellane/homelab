@@ -51,3 +51,25 @@ spec:
           nfs:
             server: hactar.lan
             path: /mnt/tank/server/immich
+---
+# Give me again the deployment of alpine app to verify the mount
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpine
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: alpine
+          image: alpine:3.14
+          command: ["sleep", "3600000"]
+          volumeMounts:
+            - name: immich-data-test
+              mountPath: /data
+      volumes:
+        - name: immich-data-testj
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/immich
