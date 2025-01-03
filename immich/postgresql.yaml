@@ -5,7 +5,7 @@ metadata:
 spec:
   teamId: immich
   numberOfInstances: 1
-  image: cellane/postgres-pgvecto.rs:pg14-v0.2.0
+  dockerImage: cellane/postgres-pgvecto.rs:pg14-v0.2.0
   volume:
     storageClass: nfs
     size: 100Gi
