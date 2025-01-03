@@ -4,7 +4,3 @@ metadata:
   name: immich-postgres-nfs
 provisioner: kubernetes.io/no-provisioner  # Static provisioning
 volumeBindingMode: WaitForFirstConsumer    # Wait for pod to be scheduled
-parameters:
-  server: hactar.lan
-  path: /mnt/tank/server/immich/db
-  mountOptions: "nfsvers=4,hard,noatime"
