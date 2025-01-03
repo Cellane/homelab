@@ -7,7 +7,7 @@ labels:
       app: immich
 resources:
   - deployment.yaml
-  - ingress.httml.yaml
+  - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
   - persistent-volume.yaml
