@@ -9,7 +9,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: immich-postgres-nfs
+  storageClassName: nfs
   nfs:
     server: hactar.lan
     path: /mnt/tank/server/immich/db

@@ -6,6 +6,7 @@ resources:
   - blog.yaml
   - cert-manager.yaml
   - cloudflared.yaml
+  - cluster-config.yaml
   - dyndns.yaml
   - external-dns.yaml
   - immich.yaml

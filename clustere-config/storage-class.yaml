@@ -1,6 +1,6 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: immich-postgres-nfs
+  name: nfs
 provisioner: kubernetes.io/no-provisioner  # Static provisioning
 volumeBindingMode: WaitForFirstConsumer    # Wait for pod to be scheduled
