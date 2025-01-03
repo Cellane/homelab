@@ -18,7 +18,7 @@ spec:
           volumeMounts:
             - name: immich-data
               mountPath: /data
-              subPath: data
+              subPath: db
       volumes:
         - name: immich-data
           nfs:
