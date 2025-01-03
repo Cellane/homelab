@@ -52,7 +52,6 @@ spec:
             server: hactar.lan
             path: /mnt/tank/server/immich
 ---
-# Give me again the deployment of alpine app to verify the mount
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -69,7 +68,7 @@ spec:
             - name: immich-data-test
               mountPath: /data
       volumes:
-        - name: immich-data-testj
+        - name: immich-data-test
           nfs:
             server: hactar.lan
             path: /mnt/tank/server/immich
