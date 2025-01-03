@@ -4,3 +4,8 @@ metadata:
   name: nfs
 provisioner: kubernetes.io/no-provisioner  # Static provisioning
 volumeBindingMode: WaitForFirstConsumer    # Wait for pod to be scheduled
+parameters:
+  mountOptions:
+    - nfsvers=4
+    - hard
+    - noatime
