@@ -47,30 +47,3 @@ spec:
           nfs:
             server: hactar.lan
             path: /mnt/tank/server/immich
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: storage-test
-spec:
-  selector:
-    matchLabels:
-      app: storage-test
-  template:
-    metadata:
-      labels:
-        app: storage-test
-    spec:
-      containers:
-        - name: alpine
-          image: alpine:latest
-          command: ["sh", "-c", "while true; do sleep 3600; done"]
-          volumeMounts:
-            - name: immich-data
-              mountPath: /data
-              # subPath: db
-      volumes:
-        - name: immich-data
-          nfs:
-            server: hactar.lan
-            path: /mnt/tank/server/immich
