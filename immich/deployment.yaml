@@ -32,6 +32,8 @@ spec:
                   key: password
             - name: DB_DATABASE_NAME
               value: immich
+            - name: DB_VECTOR_EXTENSION
+              value: pgvecto.rs
             - name: DB_URL
               value: "postgresql://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_HOSTNAME):5432/$(DB_DATABASE_NAME)?sslmode=no-verify"
             - name: IMMICH_PORT
