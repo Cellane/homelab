@@ -1,0 +1,19 @@
+apiVersion: acid.zalan.do/v1
+kind: postgresql
+metadata:
+  name: immich-db
+spec:
+  teamId: immich
+  numberOfInstances: 1
+  image: cellane/postgres-pgvecto.rs:pg14-v0.2.0
+  volume:
+    storageClass: immich-postgres-nfs
+  users:
+    admin:
+      - superuser
+      - createdb
+    immich: []
+  databases:
+    immich: immich
+  postgresql:
+    version: "14"
