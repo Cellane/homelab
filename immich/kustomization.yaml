@@ -7,9 +7,13 @@ labels:
       app: immich
 resources:
   - deployment.yaml
+  - ingress.httml.yaml
+  - ingress.https.yaml
+  - middleware.redirect-to-https.yaml
   - persistent-volume.yaml
   - postgresql.yaml
   - redis.yaml
+  - service.yaml
 images:
 - name: ghcr.io/immich-app/immich-server
   newTag: v1.123.0
