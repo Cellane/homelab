@@ -4,7 +4,7 @@ metadata:
   name: immich-db
 spec:
   teamId: immich
-  numberOfInstances: 0
+  numberOfInstances: 1
   # dockerImage: cellane/postgres-pgvecto.rs:pg14-v0.2.0
   volume:
     storageClass: nfs

@@ -79,7 +79,7 @@ spec:
           volumeMounts:
             - name: immich-ml-data
               mountPath: /cache
-              subPath: ml-cache
+              subPath: ml
       volumes:
         - name: immich-ml-data
           nfs:
