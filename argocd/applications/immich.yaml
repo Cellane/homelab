@@ -3,12 +3,14 @@ kind: Application
 metadata:
   name: immich
   namespace: immich
-  annotation:
+  annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: immich-server=ghcr.io/immich-app/immich-server:v1.x,immich-machine-learning=ghcr.io/immich-app/immich-machine-learning:v1.x
-    argocd-image-updater.argoproj.io/immich-server.update-strategy: semver
-    argocd-image-updater.argoproj.io/immich-machine-learning.update-strategy: semver
+    argocd-image-updater.argoproj.io/image-list: server=ghcr.io/immich-app/immich-server,machine-learning=ghcr.io/immich-app/immich-machine-learning
+    argocd-image-updater.argoproj.io/server.allow-tags: regexp:^v1\..*$
+    argocd-image-updater.argoproj.io/server.update-strategy: semver
+    argocd-image-updater.argoproj.io/machine-learning.allow-tags: regexp:^v1\..*$
+    argocd-image-updater.argoproj.io/machine-learning.update-strategy: semver
 spec:
   project: default
   source:
