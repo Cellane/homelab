@@ -5,7 +5,6 @@ commonLabels:
   app: vaultwarden
 resources:
   - middleware.redirect-to-https.yaml
-  - media-migration-pod.yaml
   - persistent-volume-claim.yaml
 configMapGenerator:
   - name: arr-common-config
