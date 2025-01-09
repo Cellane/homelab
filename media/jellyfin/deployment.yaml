@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: jellyfin
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       containers:
@@ -24,14 +24,14 @@ spec:
             - containerPort: 1900
               protocol: UDP
           volumeMounts:
-            - name: config
+            - name: media
               mountPath: /config
-            - name: data
+              subPath: jellyfin
+            - name: media
               mountPath: /data
+              subPath: library
       volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: jellyfin-config
-        - name: data
-          persistentVolumeClaim:
-            claimName: media-data
+        - name: media
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/media
