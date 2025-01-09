@@ -9,6 +9,11 @@ spec:
   volume:
     storageClass: nfs
     size: 100Gi
+  resources:
+    requests:
+      memory: 2Gi
+    limits:
+      memory: 2Gi
   users:
     admin:
       - superuser
