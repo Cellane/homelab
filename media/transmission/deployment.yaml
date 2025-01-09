@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: transmission
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       containers:
@@ -22,14 +22,14 @@ spec:
             - name: http
               containerPort: 9091
           volumeMounts:
-            - name: config
+            - name: media
               mountPath: /config
-            - name: data
+              subPath: transmission
+            - name: media
               mountPath: /data
+              subPath: library
       volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: transmission-config
-        - name: data
-          persistentVolumeClaim:
-            claimName: media-data
+        - name: media
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/media
