@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: radarr
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       containers:
@@ -16,14 +16,14 @@ spec:
             - name: http
               containerPort: 7878
           volumeMounts:
-            - name: config
+            - name: media
               mountPath: /config
-            - name: data
+              subPath: radarr
+            - name: media
               mountPath: /data
+              subPath: library
       volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: radarr-config
-        - name: data
-          persistentVolumeClaim:
-            claimName: media-data
+        - name: media
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/media
