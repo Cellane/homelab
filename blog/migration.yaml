@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: blog-migration-helper
+spec:
+ containers:
+ - name: alpine
+   image: alpine:latest
+   command: ["sleep", "infinity"]
+   volumeMounts:
+   - name: mysql
+     mountPath: /old/mysql
+   - name: ghost
+     mountPath: /old/ghost
+   - name: new
+     mountPath: /new
+ volumes:
+ - name: mysql
+   persistentVolumeClaim:
+     claimName: mysql-data
+ - name: ghost
+   persistentVolumeClaim:
+     claimName: ghost-data
+ - name: new
+   nfs:
+     server: hactar.lan
+     path: /mnt/tank/server/blog

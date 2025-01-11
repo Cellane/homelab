@@ -9,6 +9,7 @@ resources:
 # - ingress.http.yaml
 # - ingress.https.yaml
 # - middleware.redirect-to-https.yaml
+- migration.yaml
 - persistent-volume-claim.ghost-data.yaml
 - persistent-volume-claim.mysql-data.yaml
 - sealed-secret.mysql-credentials.yaml
