@@ -6,6 +6,7 @@ resources:
   - ingress.http.yaml
   - ingress.https.yaml
   - middleware.redirect-to-https.yaml
+  - migration.yaml
   - sealed-secret.atlantis-tfe.yaml
   - sealed-secret.atlantis-vcs.yaml
 patches:
