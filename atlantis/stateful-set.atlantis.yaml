@@ -33,9 +33,9 @@ spec:
                 secretKeyRef:
                   name: atlantis-tfe
                   key: token
-          volumes:
-            - name: atlantis-data
-              nfs:
-                server: hactar.lan
-                mountPath: /mnt/tank/server/atlantis
+      volumes:
+        - name: atlantis-data
+          nfs:
+            server: hactar.lan
+            mountPath: /mnt/tank/server/atlantis
   volumeClaimTemplates: []
