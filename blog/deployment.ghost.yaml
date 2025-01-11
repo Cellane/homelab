@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ghost
 spec:
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -34,7 +34,9 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/ghost/content
+              subPath: data
       volumes:
         - name: data
-          persistentVolumeClaim:
-            claimName: ghost-data
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/blog
