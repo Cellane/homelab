@@ -1,8 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: atlantis
-commonLabels:
-  app: atlantis
 resources:
   - github.com/runatlantis/atlantis//kustomize
   - ingress.http.yaml
@@ -13,6 +11,10 @@ resources:
 patches:
   - path: stateful-set.atlantis.yaml
 configMapGenerator:
-  - name: repo-config
-    files:
-      - resources/repo_config.json
+  - files:
+    - resources/repo_config.json
+    name: repo-config
+labels:
+  - includeSelectors: true
+    pairs:
+      app: atlantis
