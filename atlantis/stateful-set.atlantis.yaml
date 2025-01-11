@@ -38,3 +38,4 @@ spec:
               nfs:
                 server: hactar.lan
                 mountPath: /mnt/tank/server/atlantis
+  volumeClaimTemplates: []
