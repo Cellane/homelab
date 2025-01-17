@@ -4,8 +4,9 @@ metadata:
   name: vaultwarden-db
 spec:
   teamId: vaultwarden
-  numberOfInstances: 0
+  numberOfInstances: 1
   volume:
+    storageClass: nfs
     size: 2Gi
   users:
     admin:

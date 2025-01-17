@@ -10,17 +10,12 @@ spec:
    volumeMounts:
    - name: data
      mountPath: /old/data
-   - name: db
-     mountPath: /old/db
    - name: new
      mountPath: /new
  volumes:
  - name: data
    persistentVolumeClaim:
      claimName: vaultwarden-data
- - name: db
-   persistentVolumeClaim:
-     claimName: pgdata-vaultwarden-db-0
  - name: new
    nfs:
      server: hactar.lan
