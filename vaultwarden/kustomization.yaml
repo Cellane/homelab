@@ -9,6 +9,7 @@ resources:
 - ingress.https.yaml
 - middleware.redirect-to-https.yaml
 - migration.yaml
+- persistent-volume.yaml
 - persistent-volume-claim.yaml
 - postgresql.yaml
 - sealed-secret.admin-token.yaml
