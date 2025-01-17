@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: vaultwarden-migration-helper
+spec:
+ containers:
+ - name: alpine
+   image: alpine:latest
+   command: ["sleep", "infinity"]
+   volumeMounts:
+   - name: data
+     mountPath: /old/data
+   - name: db
+     mountPath: /old/db
+   - name: new
+     mountPath: /new
+ volumes:
+ - name: data
+   persistentVolumeClaim:
+     claimName: vaultwarden-data
+ - name: db
+   persistentVolumeClaim:
+     claimName: pgdata-vaultwarden-db-0
+ - name: new
+   nfs:
+     server: hactar.lan
+     path: /mnt/tank/server/vaultwarden

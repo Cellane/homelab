@@ -4,7 +4,7 @@ metadata:
   name: vaultwarden-db
 spec:
   teamId: vaultwarden
-  numberOfInstances: 1
+  numberOfInstances: 0
   volume:
     size: 2Gi
   users:
