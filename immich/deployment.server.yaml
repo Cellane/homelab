@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: immich
-  replicas: 1
+  replicas: 0
   template:
     metadata:
       labels:
@@ -49,39 +49,6 @@ spec:
               subPath: data
       volumes:
         - name: immich-data
-          nfs:
-            server: hactar.lan
-            path: /mnt/tank/server/immich
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: immich-ml
-spec:
-  selector:
-    matchLabels:
-      app: immich-ml
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: immich-ml
-    spec:
-      containers:
-        - name: server
-          image: ghcr.io/immich-app/immich-machine-learning:v1.123.0
-          ports:
-            - name: http
-              containerPort: 3003
-          env:
-            - name: IMMICH_PORT
-              value: "3003"
-          volumeMounts:
-            - name: immich-ml-data
-              mountPath: /cache
-              subPath: ml
-      volumes:
-        - name: immich-ml-data
           nfs:
             server: hactar.lan
             path: /mnt/tank/server/immich
