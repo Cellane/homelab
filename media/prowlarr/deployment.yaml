@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: prowlarr
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       containers:
@@ -16,11 +16,10 @@ spec:
             - name: http
               containerPort: 9696
           volumeMounts:
-            - name: media
+            - name: config
               mountPath: /config
-              subPath: prowlarr
       volumes:
-        - name: media
+        - name: config
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/media
+            path: /mnt/tank/server/media/prowlarr

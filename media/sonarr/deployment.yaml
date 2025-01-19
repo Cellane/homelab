@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sonarr
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       containers:
@@ -16,14 +16,16 @@ spec:
             - name: http
               containerPort: 8989
           volumeMounts:
-            - name: media
+            - name: config
               mountPath: /config
-              subPath: sonarr
-            - name: media
+            - name: data
               mountPath: /data
-              subPath: library
       volumes:
-        - name: media
+        - name: config
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/media
+            path: /mnt/tank/server/media/sonarr
+        - name: data
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/media/data
