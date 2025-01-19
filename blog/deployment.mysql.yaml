@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql
 spec:
-  replicas: 0
+  replicas: 1
   strategy:
     type: Recreate
   template:
@@ -38,9 +38,8 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/mysql
-              subPath: db
       volumes:
         - name: data
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/blog
+            path: /mnt/tank/server/blog/db

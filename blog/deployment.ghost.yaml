@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ghost
 spec:
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -34,39 +34,8 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/ghost/content
-              subPath: data
       volumes:
         - name: data
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/blog
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: blog-fix-helper
-spec:
-  containers:
-  - name: alpine
-    image: alpine:latest
-    command: ["sleep", "infinity"]
-    volumeMounts:
-    - name: current
-      mountPath: /current   # Will see the folders with actual data
-    - name: new-data
-      mountPath: /new/data  # Currently empty dataset
-    - name: new-db
-      mountPath: /new/db    # Currently empty dataset
-  volumes:
-  - name: current
-    nfs:
-      server: hactar.lan
-      path: /mnt/tank/server/blog
-  - name: new-data
-    nfs:
-      server: hactar.lan
-      path: /mnt/tank/server/blog/data
-  - name: new-db
-    nfs:
-      server: hactar.lan
-      path: /mnt/tank/server/blog/db
+            path: /mnt/tank/server/blog/data
