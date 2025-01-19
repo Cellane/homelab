@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: immich
-  replicas: 0
+  replicas: 1
   template:
     metadata:
       labels:
@@ -46,9 +46,8 @@ spec:
           volumeMounts:
             - name: immich-data
               mountPath: /usr/src/app/upload
-              subPath: data
       volumes:
         - name: immich-data
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/immich
+            path: /mnt/tank/server/immich/data

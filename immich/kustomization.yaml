@@ -9,8 +9,8 @@ resources:
 - middleware.redirect-to-https.yaml
 - persistent-volume.yaml
 - postgresql.yaml
-- redis.yaml
 - service.yaml
+- sts.redis.yaml
 images:
 - name: ghcr.io/immich-app/immich-server
   newTag: v1.124.2
