@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: vaultwarden
 spec:
-  replicas: 1
+  replicas: 0
   template:
     spec:
       containers:
@@ -37,9 +37,8 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /data
-              subPath: data
       volumes:
         - name: data
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/vaultwarden
+            path: /mnt/tank/server/vaultwarden/data
