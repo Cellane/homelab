@@ -17,9 +17,9 @@ images:
 - name: linuxserver/jellyfin
   newTag: 10.10.5
 - name: linuxserver/lidarr
-  digest: sha256:0b87ac312e6fa5869b6a2685481d1b5b90ad02fa55fc40c09f37dc666d397a4f
+  digest: sha256:578e15481f744cd5d996fdaf22a031b03739413b900a7c93ecf53d9146787247
 - name: linuxserver/prowlarr
-  digest: sha256:39a36d1aa678d7d7033008c2c81d27b04af3d5f4f085620fe9dfeb97c8cac6ac
+  digest: sha256:5a0d0a038be8b2fe1bcc6b686959c480558e8ba8a27d73ca33c3fd3b43ab50ca
 - name: linuxserver/radarr
   digest: sha256:9e8d60f6c5f8d38292cbc9ad64194aca4dc1936643e1fb3b1ba3f9c080d7b91a
 - name: linuxserver/sonarr
