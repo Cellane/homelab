@@ -21,7 +21,7 @@ images:
 - name: linuxserver/prowlarr
   digest: sha256:620fc977185563fdddda413f95f667d909485f01de386816c9a51a88bf41d79b
 - name: linuxserver/radarr
-  digest: sha256:a6d3b04ee6845bd1cbee7151182c519c7e528e080cb3b36c283da330bbdb16c0
+  digest: sha256:0a44d63dac9a0f9bb99fd30e38317cff31fc0295d36adb874076a6c4374af28e
 - name: linuxserver/sonarr
   digest: sha256:2e8ab6858c40e2095b40a4777fe090ab78d151ada6e5bde8c5cd5545925bb71b
 - name: haugene/transmission-openvpn
