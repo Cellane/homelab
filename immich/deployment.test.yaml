@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: immich-test
+spec:
+  selector:
+    matchLabels:
+      app: immich-test
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: immich-test
+    spec:
+      containers:
+        - name: test
+          image: alpine:latest
+          command: ["/bin/sh", "-c", "while true; do sleep 3600; done"]
+          ports:
+            - name: http
+              containerPort: 2283
+          env:
+            - name: DB_HOSTNAME
+              value: immich-db
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: immich.immich-db.credentials.postgresql.acid.zalan.do
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: immich.immich-db.credentials.postgresql.acid.zalan.do
+                  key: password
+            - name: DB_DATABASE_NAME
+              value: immich
+            - name: DB_VECTOR_EXTENSION
+              value: pgvector
+            - name: DB_URL
+              value: "postgresql://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_HOSTNAME):5432/$(DB_DATABASE_NAME)?sslmode=no-verify"
+            - name: IMMICH_PORT
+              value: "2283"
+            - name: REDIS_HOSTNAME
+              value: immich-cache
+            - name: TZ
+              value: Asia/Tokyo
+          volumeMounts:
+            - name: immich-data
+              mountPath: /usr/src/app/upload
+      volumes:
+        - name: immich-data
+          nfs:
+            server: hactar.lan
+            path: /mnt/tank/server/immich/data
