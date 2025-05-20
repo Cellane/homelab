@@ -10,7 +10,7 @@ resources:
   - dyndns.yaml
   - external-dns.yaml
   - immich.yaml
-  - longhorn.yaml
+  # - longhorn.yaml
   - media.yaml
   - metallb.yaml
   - postgres-operator.yaml
