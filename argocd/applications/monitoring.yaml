@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: influxdb:2.x
+    argocd-image-updater.argoproj.io/image-list: influxdb:2.x,grafana/grafana:12.x
 spec:
   project: default
   source:
