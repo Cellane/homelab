@@ -4,7 +4,7 @@ namespace: monitoring
 commonLabels:
   app: grafana
 resources:
-  - deployment.yaml
+  # - deployment.yaml
   - ingress.http.yaml
   - ingress.https.yaml
   - service.yaml
