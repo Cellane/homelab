@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: immich-db
-  replicas: 1
+  replicas: 0
   strategy:
     type: Recreate
   template:
