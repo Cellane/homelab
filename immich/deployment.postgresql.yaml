@@ -48,3 +48,14 @@ spec:
           nfs:
             server: hactar.lan
             path: /mnt/tank/server/immich/db
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: immich-db
+spec:
+  selector:
+    app: immich-db
+  ports:
+    - name: postgresql
+      port: 5432
