@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: immich-db
-  replicas: 1
+  replicas: 0
   strategy:
     type: Recreate
   template:
@@ -47,4 +47,4 @@ spec:
         - name: data
           nfs:
             server: hactar.lan
-            path: /mnt/tank/server/blog/db
+            path: /mnt/tank/server/immich/db
