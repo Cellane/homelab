@@ -35,12 +35,14 @@ spec:
               value: --data-checksums
             - name: DB_STORAGE_TYPE
               value: HDD
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgroot
           ports:
             - name: postgresql
               containerPort: 5432
           volumeMounts:
             - name: data
-              mountPath: /var/lib/postgresql/data/pgroot
+              mountPath: /var/lib/postgresql/data
       volumes:
         - name: data
           nfs:
