@@ -3,12 +3,16 @@ kind: Deployment
 metadata:
   name: postgresql
 spec:
+  selector:
+    matchLabels:
+      app: immich-db
   replicas: 1
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
+        app: immich-db
         role: db
     spec:
       containers:
