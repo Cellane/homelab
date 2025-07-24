@@ -2,20 +2,20 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: immich
 resources:
-  - deployment.ml.yaml
-  - deployment.postgresql.yaml
-  - deployment.server.yaml
-  - ingress.http.yaml
-  - ingress.https.yaml
-  - middleware.redirect-to-https.yaml
-  - persistent-volume.yaml
-  - postgresql.yaml
-  - service.yaml
-  - sts.redis.yaml
+- deployment.ml.yaml
+- deployment.postgresql.yaml
+- deployment.server.yaml
+- ingress.http.yaml
+- ingress.https.yaml
+- middleware.redirect-to-https.yaml
+- persistent-volume.yaml
+- postgresql.yaml
+- service.yaml
+- sts.redis.yaml
 images:
-  - name: ghcr.io/immich-app/immich-server
-    newTag: v1.135.3
-  - name: ghcr.io/immich-app/immich-machine-learning
-    newTag: v1.135.3
-  - name: ghcr.io/immich-app/postgres
-    newTag: 14-vectorchord0.4.3-pgvectors0.2.0
+- name: ghcr.io/immich-app/immich-server
+  newTag: v1.136.0
+- name: ghcr.io/immich-app/immich-machine-learning
+  newTag: v1.136.0
+- name: ghcr.io/immich-app/postgres
+  newTag: 14-vectorchord0.4.3-pgvectors0.2.0
