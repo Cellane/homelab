@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: server=ghcr.io/immich-app/immich-server:v1.x,machine-learning=ghcr.io/immich-app/immich-machine-learning:v1.x
+    argocd-image-updater.argoproj.io/image-list: server=ghcr.io/immich-app/immich-server:v2.x,machine-learning=ghcr.io/immich-app/immich-machine-learning:v2.x
     argocd-image-updater.argoproj.io/server.update-strategy: semver
     argocd-image-updater.argoproj.io/machine-learning.update-strategy: semver
 spec:
