@@ -14,7 +14,7 @@ resources:
 - sts.redis.yaml
 images:
 - name: ghcr.io/immich-app/immich-server
-  newTag: v2.0.1
+  newTag: v2.1.0
 - name: ghcr.io/immich-app/immich-machine-learning
   newTag: v2.1.0
 - name: ghcr.io/immich-app/postgres
