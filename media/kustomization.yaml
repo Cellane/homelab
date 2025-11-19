@@ -19,7 +19,7 @@ images:
 - name: linuxserver/lidarr
   digest: sha256:67133781394c486c45db8bd880202285ce480a36b9d9a9ea82fcba65b2393b8e
 - name: linuxserver/prowlarr
-  digest: sha256:fa48e07812d0cbce83451d7742f06b879dd552e041ab6e68673d3fbf616353af
+  digest: sha256:999cf291c644b4ba7830e81d51ecb69a993ccb9291662458eb3937914bc6080d
 - name: linuxserver/radarr
   digest: sha256:4419add65cbd7bc2beb913b6d459ce1b1a69f43e17cba9996548b6b5a9dabe52
 - name: linuxserver/sonarr
