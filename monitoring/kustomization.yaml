@@ -6,6 +6,6 @@ resources:
 - influxdb/
 images:
 - name: influxdb
-  newTag: 2.7.12
+  newTag: 2.8.0
 - name: grafana/grafana
-  newTag: 12.3.0
+  newTag: "12.3"
