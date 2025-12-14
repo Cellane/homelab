@@ -9,4 +9,4 @@ spec:
         - name: argocd-image-updater
           args:
             - --interval
-            - 5m
+            - 12h
