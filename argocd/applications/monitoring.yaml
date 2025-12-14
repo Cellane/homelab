@@ -6,7 +6,9 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/write-back-target: kustomization
-    argocd-image-updater.argoproj.io/image-list: influxdb:2.x,grafana/grafana:12.x
+    argocd-image-updater.argoproj.io/image-list: influxdb=influxdb:2.x,grafana=grafana/grafana:12.x
+    argocd-image-updater.argoproj.io/influxdb.allow-tags: "regexp:^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    argocd-image-updater.argoproj.io/grafana.allow-tags: "regexp:^[0-9]+\\.[0-9]+\\.[0-9]+$"
 spec:
   project: default
   source:
