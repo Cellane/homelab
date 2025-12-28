@@ -27,4 +27,4 @@ configMapGenerator:
   - WEBSOCKET_ENABLED=true
 images:
 - name: vaultwarden/server
-  newTag: 1.34.3
+  newTag: 1.35.0
