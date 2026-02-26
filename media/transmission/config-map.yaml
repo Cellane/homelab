@@ -5,7 +5,7 @@ metadata:
 data:
   CREATE_TUN_DEVICE: "true"
   LOG_TO_STDOUT: "true"
-  OPENVPN_CONFIG: japan
+  OPENVPN_CONFIG: jp_tokyo
   # OPENVPN_OPTS: "--inactive 3600 --ping 10 --ping-exit 60"
   OPENVPN_PROVIDER: PIA
   PGID: "1000"
