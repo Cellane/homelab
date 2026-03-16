@@ -25,4 +25,4 @@ images:
 - name: linuxserver/sonarr
   digest: sha256:3c81df569a74177fb947b3b62d662c597674511cd420ad38e9702731728ae5db
 - name: haugene/transmission-openvpn
-  newTag: "5.4"
+  newTag: 5.4.0
