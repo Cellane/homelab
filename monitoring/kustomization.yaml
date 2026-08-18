@@ -8,4 +8,4 @@ images:
 - name: influxdb
   newTag: 2.9.1
 - name: grafana/grafana
-  newTag: 12.4.8
+  newTag: 12.4.9
