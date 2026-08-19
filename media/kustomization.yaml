@@ -13,7 +13,7 @@ resources:
 - transmission/
 images:
 - name: linuxserver/bazarr
-  digest: sha256:37238e9c82f8c3582cbb189ef68bd4418dcbc33f0716c40952cd413d8e481d96
+  digest: sha256:5fbbe9be562b7f19a61f471c5d1a3f2750748f4802e8c840da25da6bb75dc3b7
 - name: linuxserver/jellyfin
   newTag: 10.11.11
 - name: linuxserver/lidarr
