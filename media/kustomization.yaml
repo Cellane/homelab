@@ -23,6 +23,6 @@ images:
 - name: linuxserver/radarr
   digest: sha256:bffce38219c996eacbe10c9590291c8c433aa8519c358cb8e3d93cdc0b3be650
 - name: linuxserver/sonarr
-  digest: sha256:f7a082597492a0aa2acca18326cd8196df5e4f9fd3d94a72e9d635b43e48e5cd
+  digest: sha256:8529ad25ee3379a00f20df423f71bfbb873c6b1944bf764d789d494c5ddf7b4a
 - name: haugene/transmission-openvpn
   newTag: 5.5.2
